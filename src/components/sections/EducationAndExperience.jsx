@@ -3,7 +3,9 @@ import { FaLandmark } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { PiCertificateFill } from "react-icons/pi";
-import { SiHackerrank, SiIbm } from "react-icons/si";
+// import { SiHackerrank, SiIbm } from "react-icons/si";
+import { SiHackerrank } from "react-icons/si";
+import { FaBriefcase } from "react-icons/fa";
 
 function EducationAndExperience() {
   return (
@@ -46,7 +48,7 @@ function EducationAndExperience() {
                       </p>
                     </div>
                   </h3>
-                  
+
                 </div>
               </div>
             </div>
@@ -70,7 +72,7 @@ function EducationAndExperience() {
                 return (
                   <div className="hs-carousel-slide relative" key={index}>
                     {cert.icon === "ibm" ? (
-                      <SiIbm className="text-blue-500 absolute right-5 top-0 text-5xl" />
+                      <FaBriefcase className="text-blue-500 absolute right-5 top-0 text-5xl" />
                     ) : cert.icon === "google" ? (
                       <FcGoogle className="text-blue-500 absolute right-5 top-3 text-3xl" />
                     ) : (
@@ -146,7 +148,7 @@ function EducationAndExperience() {
               </svg>
             </span>
           </button>
-          
+
           {/* =========== CAROUSEL PAGINATION =========== */}
           <div className="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
             {user_info.certificates.map((cert, index) => {
@@ -160,7 +162,7 @@ function EducationAndExperience() {
           </div>
         </div>
       </div>
-      
+
       {/* =========== EXPERIENCE =========== */}
       <div className="w-full">
         {/* =========== EXPERIENCE TITLE =========== */}
@@ -199,7 +201,7 @@ function EducationAndExperience() {
                         </p>
                       </div>
                     </h3>
-                    
+
                     <ul className="list-disc list-inside text-zinc-800 dark:text-white mt-2">
                       {/* =========== DESCRIPTION LIST =========== */}
                       {exp.descriptions.map((desc, index) => {

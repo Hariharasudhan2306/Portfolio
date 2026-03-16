@@ -9,7 +9,7 @@ function Hero() {
           <img
             src={user_info.main.photo}
             className="rounded-full mb-6 lg:hidden"
-            alt="Daniel Shan Balico Graduation Picture"
+            alt="Hariharasudhan Picture"
           />
 
           {/* =========== TOOLTIP TEXT =========== */}
@@ -49,7 +49,7 @@ function Hero() {
             <img
               className="rounded-[10%] transform rotate-3"
               src={user_info.main.photo}
-              alt="Daniel Shan Balico Graduation Picture"
+              alt="Hariharasudhan Picture"
             />
           </div>
         </div>

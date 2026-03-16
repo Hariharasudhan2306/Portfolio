@@ -2,7 +2,7 @@ import user_info from "../../data/user_info.js";
 
 import { FaSquareXTwitter, FaLinkedin } from "react-icons/fa6";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPhone } from "react-icons/md";
 
 function Contact() {
   return (
@@ -39,7 +39,7 @@ function Contact() {
           <FaSquareXTwitter className="self-center text-lg text-red-800 dark:text-red-500" />
           <span className="self-center">Follow on X</span>
         </a>
-        
+
         {/* =========== INSTAGRAM =========== */}
         <a
           href={user_info.socials.instagram}
@@ -62,6 +62,13 @@ function Contact() {
       <hr className="mt-6 w-72 border dark:border-zinc-800" />
 
       {/* =========== EMAIL =========== */}
+      <a
+        href={`tel:${user_info.main.phone}`}
+        className="flex mt-6 text-zinc-600 dark:text-zinc-300 hover:dark:text-zinc-300 gap-4 hover:text-zinc-700 transition-all duration-300"
+      >
+        <MdPhone className="self-center text-lg text-red-800 dark:text-red-500" />
+        <span>{user_info.main.phone}</span>
+      </a>
       <a
         href={`mailto:${user_info.main.email}`}
         className="flex mt-6 text-zinc-600 dark:text-zinc-300 hover:dark:text-zinc-300 gap-4 hover:text-zinc-700 transition-all duration-30"
