@@ -1,8 +1,10 @@
+
 const info = {
+
     // ============ MAIN DETAILS ============
     main: {
         name: "Hariharasudhan M",
-        description: "I am a Full Stack Web Developer with 3 years of experience in designing and developing scalable web applications and RESTful APIs. Strong expertise in Laravel, PHP, MySQL, and mobile application backend services. Experienced in building high-traffic news platforms, Android & iOS APIs, Skilled in database optimization, authentication systems, and production-level application deployment.",
+        description: "I am a Full Stack Web Developer with {experience} of experience in designing and developing scalable web applications and RESTful APIs. Strong expertise in Laravel, PHP, MySQL, and mobile application backend services. Experienced in building high-traffic news platforms, Android & iOS APIs, Skilled in database optimization, authentication systems, and production-level application deployment.",
         role: "Full-Stack Web Developer",
         // photo: "../photos3.jpg",
         photo: `${import.meta.env.BASE_URL}photos3.jpg`,

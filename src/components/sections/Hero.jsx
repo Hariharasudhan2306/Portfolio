@@ -1,6 +1,35 @@
 import user_info from "../../data/user_info.js";
 import { IoIosArrowForward } from "react-icons/io";
 
+const getTotalExperienceYears = (experiences) => {
+  let totalMonths = 0;
+
+  experiences.forEach((exp) => {
+    const [start, end] = exp.duration.split(" - ");
+
+    const startDate = new Date(start);
+
+    const endDate =
+      end === "Present"
+        ? new Date()
+        : new Date(end);
+
+    totalMonths +=
+      (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+      (endDate.getMonth() - startDate.getMonth()) + 1;
+  });
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  return `${years} years ${months} months`;
+};
+
+const description = user_info.main.description.replace(
+  "{experience}",
+  getTotalExperienceYears(user_info.experience)
+);
+
 function Hero() {
   return (
     <section id="hero" className="pb-28 pt-24 sm:pt-28 md:pt-44 flex px-6 lg:px-24">
@@ -28,7 +57,7 @@ function Hero() {
             </h1>
 
             <p className="mt-6 dark:text-zinc-300 text-base font-light lg:w-[87%] leading-7">
-              {user_info.main.description}
+              {description}
             </p>
 
             <div className="flex gap-2 mt-6">
