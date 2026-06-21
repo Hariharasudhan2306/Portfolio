@@ -7,6 +7,57 @@ import { PiCertificateFill } from "react-icons/pi";
 import { SiHackerrank } from "react-icons/si";
 import { FaBriefcase } from "react-icons/fa";
 
+const getTotalExperience = (experiences) => {
+  let totalMonths = 0;
+
+  experiences.forEach((exp) => {
+    const [start, end] = exp.duration.split(" - ");
+
+    const startDate = new Date(start);
+    const endDate =
+      end === "Present"
+        ? new Date()
+        : new Date(end);
+
+    totalMonths +=
+      (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+      (endDate.getMonth() - startDate.getMonth()) + 1; // inclusive
+  });
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  return `${years} Year ${months} Month`;
+};
+
+const getDurationText = (duration) => {
+  const [start, end] = duration.split(" - ");
+
+  const startDate = new Date(start);
+
+  const endDate =
+    end === "Present"
+      ? new Date()
+      : new Date(end);
+
+  let totalMonths =
+    (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+    (endDate.getMonth() - startDate.getMonth());
+
+  // Inclusive counting (optional)
+  totalMonths += 1;
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  let result = [];
+
+  if (years > 0) result.push(`${years} Year`);
+  if (months > 0) result.push(`${months} Month`);
+
+  return `${duration} (${result.join(" ")})`;
+};
+
 function EducationAndExperience() {
   return (
     <section id="education-and-experience" className="mt-20 mx-4 lg:mx-20 flex flex-col md:flex-row gap-4 md:gap-2">
@@ -169,6 +220,9 @@ function EducationAndExperience() {
         <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
           <FaBuildingUser className="text-2xl text-red-800 dark:text-red-500" />
           Experience
+          <span className="text-sm font-normal text-zinc-500">
+            ({getTotalExperience(user_info.experience)})
+          </span>
         </h4>
 
         <div className="md:h-[480px] md:overflow-y-scroll scroll-smooth">
@@ -178,7 +232,7 @@ function EducationAndExperience() {
               <div key={index}>
                 <div className="ps-2 my-2 first:mt-0 !mt-2">
                   <h3 className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
-                    {exp.duration}
+                    {getDurationText(exp.duration)}
                   </h3>
                 </div>
 

@@ -6,7 +6,7 @@ import { FaAws, FaCss3Alt, FaDigitalOcean, FaGitAlt, FaGitlab, FaHtml5, FaNodeJs
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 // import { SiAntdesign, SiExpress, SiFlask, SiJest, SiNuxtdotjs, SiPassport, SiPostman, SiPythonanywhere, SiSequelize, SiTailwindcss, SiTensorflow } from "react-icons/si";
-import { SiAntdesign, SiExpress, SiFlask, SiJest, SiNuxt, SiPassport, SiPostman, SiPythonanywhere, SiSequelize, SiTailwindcss, SiTensorflow, SiJquery, SiLivewire, SiNextdotjs, SiJavascript, SiLaravel } from "react-icons/si";
+import { SiAntdesign, SiExpress, SiFlask, SiJest, SiNuxtdotjs, SiPassport, SiPostman, SiPythonanywhere, SiSequelize, SiTailwindcss, SiTensorflow, SiJquery, SiLivewire, SiNextdotjs, SiJavascript, SiLaravel } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 // import { FaBootstrap, FaLaravel, FaPhp, FaCode } from "react-icons/fa";
 // import { SiJquery, SiLivewire, SiNextdotjs, SiJavascript, SiLaravel } from "react-icons/si";

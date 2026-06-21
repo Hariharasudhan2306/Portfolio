@@ -4,7 +4,8 @@ const info = {
         name: "Hariharasudhan M",
         description: "I am a Full Stack Web Developer with 3 years of experience in designing and developing scalable web applications and RESTful APIs. Strong expertise in Laravel, PHP, MySQL, and mobile application backend services. Experienced in building high-traffic news platforms, Android & iOS APIs, Skilled in database optimization, authentication systems, and production-level application deployment.",
         role: "Full-Stack Web Developer",
-        photo: "../photos3.jpg",
+        // photo: "../photos3.jpg",
+        photo: `${import.meta.env.BASE_URL}photos3.jpg`,
         email: "harisudhan7562@gmail.com",
         phone: "+91 6374518238",
     },
@@ -21,7 +22,7 @@ const info = {
     // ============ PROJECTS ============
     projects: [
         {
-            title: "Project Dynamic Web Application",
+            title: "Dynamic Web Application",
             description: "A dynamic web application designed to deliver interactive website functionality with responsive design, database integration, and real-time content management for a seamless user experience.",
             technologies: "HTML, CSS, Bootstrap, JavaScript, React, jQuery, PHP, Laravel, Livewire, MySQL",
             github: "#",
@@ -75,23 +76,38 @@ const info = {
             school: "Bharathidhasan University, Trichy",
             degree: "Master of Computer Science",
             duration: "2021 - 2023",
-            image: "University_logo.png"
+            // image: "University_logo.png"
+            image: `${import.meta.env.BASE_URL}University_logo.png`,
         },
         {
             school: "Bharathidhasan University, Trichy",
             degree: "Bachelor of Computer Science",
             duration: "2018 - 2021",
-            image: "University_logo.png"
+            // image: "University_logo.png"
+            image: `${import.meta.env.BASE_URL}University_logo.png`,
         },
     ],
 
     // ============ EXPERIENCE ============
     experience: [
         {
+            position: "Software Engineer",
+            company: "Vintorix Private Limited",
+            duration: "Jun 2026 - Present",
+            // image: "dina_logo.jpg",
+            image: `${import.meta.env.BASE_URL}fav-vintorix.ico`,
+            descriptions: [
+                "Developed and maintained web applications using PHP, Laravel, MySQL, HTML, CSS, JavaScript, and Bootstrap.",
+                "Built and managed company products, ERP systems, Admin Dashboards, CMS platforms, and custom business applications.",
+                "Implemented AJAX-based features and optimized MySQL databases to enable seamless real-time data processing and improved application performance.",
+            ]
+        },
+        {
             position: "Software Developer",
             company: "Dinamalar",
-            duration: "May 2025 - Feb 2024 (10 Months)",
-            image: "dina_logo.jpg",
+            duration: "May 2025 - Feb 2026",
+            // image: "dina_logo.jpg",  (10 Months)
+            image: `${import.meta.env.BASE_URL}dina_logo.jpg`,
             descriptions: [
                 "Developed and maintained high-traffic web applications for the Dinamalar news platform.",
                 "Designed and implemented secure RESTful APIs for Android and iOS mobile applications  Built backend services for news publishing, user authentication, and content management.",
@@ -101,8 +117,9 @@ const info = {
         {
             position: "Junior Software Engineer",
             company: "Nimatooz Smile Mobility Pvt Ltd",
-            duration: "Jun 2023 - Dec 2024 (1 Year 7 Month)",
-            image: "nima_logo.png",
+            duration: "Jun 2023 - Dec 2024",
+            // image: "nima_logo.png", (1 Year 6 Month)
+            image: `${import.meta.env.BASE_URL}nima_logo.png`,
             descriptions: [
                 "Built and maintained web applications using React for the front end and PHP/MySQL for the back end.",
                 "Developed dynamic user interfaces using JavaScript, jQuery, and Bootstrap.",

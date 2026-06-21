@@ -1,6 +1,6 @@
 import { AppContext } from "../App.jsx";
 import { useContext, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 import ToggleTheme from "../components/ToggleTheme.jsx";
 
@@ -13,11 +13,16 @@ import Skills from "../components/sections/Skills.jsx";
 
 function Homepage() {
   const { theme, switchTheme } = useContext(AppContext);
-  const location = useLocation();
+  // const location = useLocation();
 
+  // useEffect(() => {
+  //   window.HSStaticMethods.autoInit();
+  // }, [location.pathname]);
   useEffect(() => {
-    window.HSStaticMethods.autoInit();
-  }, [location.pathname]);
+    if (window.HSStaticMethods) {
+      window.HSStaticMethods.autoInit();
+    }
+  }, []);
 
   return (
     <div className="bg-zinc-100 dark:bg-zinc-900">
@@ -26,7 +31,7 @@ function Homepage() {
 
         <Hero />
         <Projects />
-				<EducationAndExperience />
+        <EducationAndExperience />
         <Skills />
         <Contact />
 
